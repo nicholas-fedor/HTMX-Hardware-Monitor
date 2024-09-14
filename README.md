@@ -3,6 +3,8 @@
 Following YouTube tutorial video
 [here](https://www.youtube.com/watch?v=fBDUn7b9plw).
 
+Author's GitHub Repo: [link](https://github.com/sigrdrifa/go-htmx-websockets-example)
+
 ## TODO
 
 - Templating websocket data
