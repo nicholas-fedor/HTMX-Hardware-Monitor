@@ -1,6 +1,6 @@
 # HTMX Hardware Monitor
 
-Original YouTube tutorial video: [link](https://www.youtube.com/watch?v=fBDUn7b9plw)  
+sigfault's YouTube tutorial video: [link](https://www.youtube.com/watch?v=fBDUn7b9plw)  
 Author's GitHub Repo: [link](https://github.com/sigrdrifa/go-htmx-websockets-example)
 
 ## TODO
