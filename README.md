@@ -17,7 +17,7 @@ Go: [link](https://go.dev/doc/install)
 
 ## Go Dependencies
 
-Hardware Information - [gopsutil](https://github.com/shirou/gopsutil)
+Hardware Information - [gopsutil](https://github.com/shirou/gopsutil)  
 Websockets - [websocket by nhooyr](https://github.com/coder/websocket)
 
 ## HTMX Websockets
