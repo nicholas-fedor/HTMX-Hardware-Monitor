@@ -12,7 +12,7 @@ Author's GitHub Repo: [link](https://github.com/sigrdrifa/go-htmx-websockets-exa
 
 ## Resources
 
-HTMX: [link](https://htmx.org/docs/#installing)
+HTMX: [link](https://htmx.org/docs/#installing)  
 Go: [link](https://go.dev/doc/install)
 
 ## Go Dependencies
