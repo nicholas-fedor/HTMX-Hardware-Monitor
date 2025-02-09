@@ -3,10 +3,13 @@
 sigfault's YouTube tutorial video: [link](https://www.youtube.com/watch?v=fBDUn7b9plw)  
 sigfault's GitHub Repo: [link](https://github.com/sigrdrifa/go-htmx-websockets-example)
 
-## TODO
+## Usage
 
-- Templating websocket data
-- Webpage styling
+Run both the frontend and backend via a single command from the root directory:
+
+```console
+go run main.go
+```
 
 ## Resources
 

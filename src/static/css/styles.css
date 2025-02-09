@@ -1,0 +1,57 @@
+/* Custom styles.css */
+body {
+    background-color: #f4f4f4;
+}
+
+.monitor-card {
+    margin: 20px 0;
+}
+
+.timestamp {
+    font-style: italic;
+    color: #7f8c8d;
+    text-align: center;
+}
+
+.data-section {
+    margin-bottom: 20px;
+}
+
+.data-section pre {
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.system-info, .cpu-info, .disk-info {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.system-info h3, .cpu-info h3, .disk-info h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.system-info p, .cpu-info p, .disk-info p {
+    margin: 5px 0;
+}
+
+.system-info strong, .cpu-info strong, .disk-info strong {
+    font-weight: bold;
+    color: #3498db;
+}
+
+#loading-icon {
+    margin: 20px 0;
+}
+
+/* Optional: Dimming the content while loading */
+#monitor-data {
+    transition: opacity 0.3s ease;
+}

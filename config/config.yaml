@@ -1,0 +1,5 @@
+backend:
+  port: 8080
+frontend:
+  port: 5500
+  staticPath: "./src/"

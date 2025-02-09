@@ -2,29 +2,51 @@
 <html lang="en">
 
 <head>
-    <title> &#60;/&#62; HTMX Hardware Monitor</title>
-    <link rel="icon" type="image/ico" href="/src/static/img/favicon.ico">
+    <title>
+        </> HTMX Hardware Monitor</title>
+    <link rel="icon" type="image/ico" href="/static/img/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/htmx.org@2.0.2"
         integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/htmx-ext-ws@2.0.1/ws.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 
-<body>
-    <h1>HTMX Hardware Monitor</h1>
-    <div hx-ext="ws" ws-connect="ws://localhost:8080/ws">
-        <div id="update-timestamp">Loading data...</div>
-        <div id="monitor-data">
-            <h2>System Data</h2>
-            <div id="system-data"></div>
-            <h2>Disk Data</h2>
-            <div id="disk-data"></div>
-            <h2>CPU Data</h2>
-            <div id="cpu-data"></div>
+<body class="d-flex flex-column align-items-center">
+    <h1 class="bg-primary text-white text-center w-100 py-3 mb-0">HTMX Hardware Monitor</h1>
+    <div hx-ext="ws" ws-connect="ws://localhost:8080/ws" class="container"
+        hx-on="htmx:beforeRequest: showLoadingIcon(), htmx:afterRequest: hideLoadingIcon()">
+        <div id="loading-icon" class="text-center" style="display: none;">
+            <img src="/static/img/spinning-circles.svg" alt="Loading..." width="50" height="50">
+        </div>
+        <div id="update-timestamp" class="timestamp">Loading data...</div>
+        <div id="monitor-data" class="card monitor-card">
+            <div class="card-body">
+                <h2 class="card-title">System Information</h2>
+                <div id="system-data" class="data-section"></div>
+                <h2 class="card-title">Disk Information</h2>
+                <div id="disk-data" class="data-section"></div>
+            </div>
         </div>
     </div>
+
+    <script>
+        function showLoadingIcon() {
+            document.getElementById('loading-icon').style.display = 'block';
+            document.getElementById('monitor-data').style.opacity = '0.5'; // Optionally, dim the content
+        }
+
+        function hideLoadingIcon() {
+            document.getElementById('loading-icon').style.display = 'none';
+            document.getElementById('monitor-data').style.opacity = '1'; // Return content to full opacity
+        }
+    </script>
 </body>
 
 </html>
